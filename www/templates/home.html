@@ -1,5 +1,5 @@
 <div class="bar bar-header bar-dark">
-  <h1 class="title">CAHU - Pick a Category</h1>
+  <h1 class="title">CAH Up - Pick a Category</h1>
 </div>
 <ion-content class="has-header">
 
@@ -8,8 +8,8 @@
     <div class="item item-divider">
       Cards Against Humanity
     </div>
-    <a class="item" ng-repeat="category in categories" ng-href="#/play/cah/{{category}}">
-      {{category}}
+    <a class="item" ng-repeat="category in categories" ng-href="#/play/cah/{{category.name}}">
+      {{category.name}} ({{category.count}})
     </a>
 
     <div class="item item-divider">

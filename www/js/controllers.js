@@ -1,7 +1,12 @@
 angular.module('starter.controllers', ['ngCordova'])
 
 .controller('MenuCtrl', function($scope, Cards) {
-  $scope.categories = Object.keys(Cards.categories);
+  $scope.categories = Object.keys(Cards.categories).map(function(category) {
+    return {
+      name: category,
+      count: Cards.categories[category].length
+    };
+  });;
 })
 
 .controller('PlayCtrl', function($scope, Cards, $stateParams, $cordovaDeviceMotion, $cordovaVibration, $location) {
@@ -28,7 +33,7 @@ angular.module('starter.controllers', ['ngCordova'])
     }, 1);
   };
   $scope.next = function() {
-    var text = cards[Math.floor(cards.length*Math.random())].text
+    var text = cards[Math.floor(cards.length*Math.random())]
     $center.html(text);
     $center.css({
       'font-size': '',

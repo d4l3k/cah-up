@@ -1,7 +1,8 @@
-a.item {
-  width: 50%;
-  display: inline-block;
-  margin-bottom: -5px; }
+@media (min-width: 600px) {
+  a.item {
+    width: 50%;
+    display: inline-block;
+    margin-bottom: -6px; } }
 
 .text-fit {
   background-color: black;
