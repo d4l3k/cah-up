@@ -1,0 +1,14 @@
+<div class="text-fit">
+  <div class="rotate" on-tap="advance(true)">
+    <div class="countdown">
+      {{correct}}/{{total}} {{time}}s
+    </div>
+    <div class="center content" ng-show="time > 0">
+    </div>
+    <div class="center final" ng-show="time == 0">
+      <div ng-repeat="status in statuses" ng-class="{correct: status.correct}">
+        {{status.text}}
+      </div>
+    </div>
+  </div>
+</div>
